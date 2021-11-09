@@ -17,7 +17,9 @@ function Register() {
 
   const register = () => {
     if (!name) alert("Please enter name");
-    registerWithEmailAndPassword(name, email, password);
+    if (password.length < 8) 
+    alert("Minimum 8 characters for password")
+    else registerWithEmailAndPassword(name, email, password);
   };
 
   useEffect(() => {

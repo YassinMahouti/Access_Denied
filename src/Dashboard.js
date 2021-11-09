@@ -16,7 +16,7 @@ function Dashboard() {
         .where("uid", "==", user?.uid)
         .get();
       const data = await query.docs[0].data();
-      setName(data.name);
+      setName(data.user_birth);
     } catch (err) {
       console.error(err);
       alert("An error occured while fetching user data");
